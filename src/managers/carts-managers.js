@@ -113,8 +113,8 @@ async clearCart(id) {
         
         const updatedCart = await this.model.findByIdAndUpdate(
             id, 
-            { $set: { products: [] } }, // Vaciamos los productos
-            { new: true } // Para que devuelva el carrito YA vacío
+            { $set: { products: [] } }, 
+            { new: true } 
         );
         return updatedCart;
     } catch (error) {

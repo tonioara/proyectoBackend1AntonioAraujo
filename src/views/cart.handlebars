@@ -1,0 +1,21 @@
+<h1>Detalle de tu Carrito</h1>
+
+<div class="cart-container">
+    {{#each products}}
+        <div style="border: 1px solid #000; margin: 10px; padding: 10px;">
+            <h3>Producto: {{this.productId.name}}</h3>
+            <p>Descripción: {{this.productId.description}}</p>
+            <p>Categoría: {{this.productId.category}}</p>
+            <p><strong>Precio Unitario:</strong> ${{this.productId.price}}</p>
+            <p><strong>Cantidad en carrito:</strong> {{this.quantity}}</p>
+            
+           
+           
+           
+        </div>
+    {{else}}
+        <p>Tu carrito está vacío.</p>
+    {{/each}}
+</div>
+
+<a href="/products">Volver a la tienda</a>
